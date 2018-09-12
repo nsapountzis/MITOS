@@ -1,0 +1,11 @@
+1.Run the qemu with qmp -qmp tcp:127.0.0.1:4444,server,nowait
+sudo ./i386-softmmu/qemu-system-i386 -hda ~/win7_vm/win7-ultimate.qcow -m 4048 --monitor stdio -netdev user,id=net0 -device e1000,netdev=net0 -vnc :1 -qmp tcp:127.0.0.1:4444,server,nowait
+
+2.Go to script and run the below command:
+cd scripts
+./record_chunks.sh | telnet localhost 4444
+
+---------------------
+record_chunks.sh Record each 300 sec. for 100 times by default.
+
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+for rec in {2..18}
+do
+   echo "../qemu/z_"$rec
+   python rrpack.py "../qemu/z_"$rec
+done
